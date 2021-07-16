@@ -1,0 +1,3 @@
+GET https://api.pexels.com/v1/search?query=people
+Authorization: 563492ad6f91700001000001effaf1d880ca49ceb7865c8dc9f35f15
+Content-Type: application/json

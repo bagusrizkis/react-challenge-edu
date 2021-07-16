@@ -1,0 +1,4 @@
+pexels API Key: 563492ad6f91700001000001effaf1d880ca49ceb7865c8dc9f35f15
+
+https://api.rawg.io/api/games
+Rawg: 76b2fabcaaab4d58ac7e2c1caf65484d
