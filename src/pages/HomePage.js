@@ -4,7 +4,7 @@ import InfiniteScroll from "react-infinite-scroll-component"
 
 
 function HomePage () {
-    const [data, loading, err, loadMore] = useFetch('/api/games')
+    const [data, loading, err, loadMore] = useFetch('/games', {isPage: true})
 
     if (loading) {
        return (
@@ -16,19 +16,19 @@ function HomePage () {
         return (
             <>
             <InfiniteScroll
-                dataLength={data.length}
+                dataLength={data.payload.length}
                 next={loadMore}
                 hasMore={true}
                 loader={<h4 style={{textAlign: 'center'}}>Fetching More Data...</h4>}
             >
-                <ContainerCard data={data} />
+                <ContainerCard data={data.payload} />
             </InfiniteScroll>
             </>
         )
     } else if (err) {
         return (
             <>
-                <h1>Hello</h1>
+                <h1>Error get data</h1>
             </>
         )
     }
