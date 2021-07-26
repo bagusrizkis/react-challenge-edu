@@ -1,10 +1,10 @@
 import { Col, Div, Image, Text, Icon, Button } from "atomize";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addFavorite } from "../services/actions/actions";
+import { addFavorite } from "../services/actions/favoriteActions";
 
 function Card(props) {
-  const favorites = useSelector((state) => state.favorites);
+  const favorites = useSelector((state) => state.favorite.favorites);
 
   const game = props.game;
   const dispatch = useDispatch();
